@@ -1,10 +1,10 @@
-FROM openjdk:13-jdk-alpine
+FROM openjdk:14-jdk-alpine
 
 RUN apk add --no-cache curl unzip ed bash \
-    && curl -fSL https://www.ghidra-sre.org/ghidra_9.0.2_PUBLIC_20190403.zip -o ghidra.zip \
-    && echo '10ffd65c266e9f5b631c8ed96786c41ef30e2de939c3c42770573bb3548f8e9f  ghidra.zip' | sha256sum -c \
+    && curl -fSL https://ghidra-sre.org/ghidra_9.1.2_PUBLIC_20200212.zip -o ghidra.zip \
+    && echo 'ebe3fa4e1afd7d97650990b27777bb78bd0427e8e70c1d0ee042aeb52decac61  ghidra.zip' | sha256sum -c \
     && unzip -q ghidra.zip \
-    && mv ghidra_9.0.2 ghidra \
+    && mv ghidra_9.1.2_PUBLIC ghidra \
     && rm ghidra.zip \
     && apk del --purge curl unzip \
     && rm -rf /tmp/* /var/cache/apk/* \
