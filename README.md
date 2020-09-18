@@ -1,5 +1,7 @@
 ghidra-server-alpine
 =====
+### I am attempting to keep this repo up to date with the latest Ghidra and JDK versions.
+
 
 This project provides a slim alpine docker image(~1GB) running the ghidra server allowing collaborative work.
 
@@ -13,5 +15,5 @@ This project provides a slim alpine docker image(~1GB) running the ghidra server
 5. `docker-compose down` to stop the container
 * make sure that you have docker installed and that the repo directory is included in docker file sharing(under settings)
 
-### If you have any problems don't hesitate to open an issue or DM me @DaniGoland.
+### If you have any problems don't hesitate to open an issue.
 ### PRs are very welcome!
